@@ -1,0 +1,31 @@
+import { NEWS_ADD, NEWS_FETCH_ERROR } from "../constants/actionTypes.js";
+
+const INITIAL_STATE = {
+  news: [],
+  error: null,
+};
+
+const applyAddNews = (state, action) => ({
+  news: action.news,
+  error: null,
+});
+
+const applyFetchErrorNews = (state, action) => ({
+  news: [],
+  error: action.error,
+});
+
+function articleReducer(state = INITIAL_STATE, action) {
+  switch (action.type) {
+    case NEWS_ADD: {
+      return applyAddNews(state, action);
+    }
+    case NEWS_FETCH_ERROR: {
+      return applyFetchErrorNews(state, action);
+    }
+    default:
+      return state;
+  }
+}
+
+export default articleReducer;
