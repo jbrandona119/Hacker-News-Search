@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hacker News Search
+
+This is a React/Redux application that allows you to search Hacker News to find any articles posted there!
 
 ## Available Scripts
 
